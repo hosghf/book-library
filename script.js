@@ -28,16 +28,16 @@ function showResualt() {
     const titleResualt = document.createElement('div')
     const authorResualt = document.createElement('div')
     const pagesResualt = document.createElement('div')
-    const readResualt = document.createElement('input')
+    const readCheckbox = document.createElement('input')
     const removeBtn = document.createElement('button')
 
     titleResualt.innerHTML = element.title
     authorResualt.innerHTML = element.author
     pagesResualt.innerHTML = element.pages
 
-    readResualt.setAttribute('type', 'checkbox')
-    readResualt.checked = element.read
-    readResualt.addEventListener('click', () => toggleRead(index))
+    readCheckbox.setAttribute('type', 'checkbox')
+    readCheckbox.checked = element.read
+    readCheckbox.addEventListener('click', () => toggleRead(index))
 
     removeBtn.innerText = 'remove'
     removeBtn.setAttribute('id', index)
@@ -47,7 +47,7 @@ function showResualt() {
     context.appendChild(titleResualt)
     context.appendChild(authorResualt)
     context.appendChild(pagesResualt)
-    context.appendChild(readResualt)
+    context.appendChild(readCheckbox)
     context.appendChild(removeBtn)
   });
 }
@@ -61,5 +61,5 @@ function toggleRead(elementIndex) {
   myLibrary[elementIndex].read = !myLibrary[elementIndex].read 
 }
 
-const addBook = document.getElementById('submit')
+const addBook = document.getElementById('addBook')
 addBook.addEventListener('click', addBookToLibrary)
