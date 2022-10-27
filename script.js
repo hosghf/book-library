@@ -7,6 +7,10 @@ function Book(title, author, pages, read) {
   this.read = read
 }
 
+Book.prototype.toggleRead = function() {
+  this.read = !this.read
+}
+
 function addBookToLibrary() {
   const title = document.getElementById('title')
   const author = document.getElementById('author')
@@ -37,7 +41,7 @@ function showResualt() {
 
     readCheckbox.setAttribute('type', 'checkbox')
     readCheckbox.checked = element.read
-    readCheckbox.addEventListener('click', () => toggleRead(index))
+    readCheckbox.addEventListener('click', () => element.toggleRead())
 
     removeBtn.innerText = 'remove'
     removeBtn.setAttribute('id', index)
@@ -55,10 +59,6 @@ function showResualt() {
 function removeBookFromLibrary(elementIndex) {
   myLibrary.splice(elementIndex,1)
   showResualt()
-}
-  
-function toggleRead(elementIndex) {
-  myLibrary[elementIndex].read = !myLibrary[elementIndex].read 
 }
 
 const addBook = document.getElementById('addBook')
