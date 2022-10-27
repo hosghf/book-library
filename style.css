@@ -1,0 +1,12 @@
+.row {
+  display: flex;
+  margin:10px 0;
+}
+
+#resualt {
+  margin: 50px 0;
+}
+
+.row > div {
+  margin: 10px;
+}
