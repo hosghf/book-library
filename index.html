@@ -5,24 +5,28 @@
 
   <body>
     <div class="container">
-      <div class="row">
-        <label for="title">title</label>
-        <input type="text" id="title">
+      <div class="form-row">
+        <label for="title"> title </label>
+        <input type="text" id="title" required>
+        <span class="error-text">fill this field</span>
       </div>
         
-      <div class="row">
+      <div class="form-row">
         <label for="author">author</label>
-        <input type="text" id="author">
+        <input type="text" id="author" required>
+        <span class="error-text">fill this field</span>
       </div>
         
-      <div class="row">
+      <div class="form-row">
         <label for="pages">pages</label>
-        <input type="number" id="pages" placeholder="ex: 230">
+        <input type="number" id="pages" placeholder="ex: 230" required>
+        <span class="error-text">fill this field</span>
       </div>
         
-      <div class="row">
+      <div class="my-1">
         <label for="read">read</label>
-        <input type="checkbox" id="read">
+        <input type="checkbox" id="read" required>
+        <span class="error-text">fill this field</span>
       </div>
 
       <button id="addBook" value="new book">Add book</button>
